@@ -1,0 +1,40 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title>Auction_Website</title>
+    <base href="/" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/ui-bootstrap-csp.css" rel="stylesheet" />
+</head>
+<body ng-controller="AccountController as account">
+
+    <h1>Auction Website</h1>
+    <div>
+        <a href="/">Home</a> /
+        <a href="/about">About</a> /
+        <a href="/login" ng-show="!account.isLoggedIn()">login</a>
+        <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">logout</a>
+    </div>
+
+    <ng-view></ng-view>
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="~/ngApp/app.js"></script>
+
+    <script src="~/ngApp/services/services.js"></script>
+    <script src="~/ngApp/services/AuctionServices.js"></script>
+    <script src="~/ngApp/services/accountService.js"></script>
+
+    <script src="~/ngApp/controllers/auctionControllers.js"></script>
+    <script src="~/ngApp/controllers/accountController.js"></script>
+    <script src="~/ngApp/controllers/controllers.js"></script>
+
+</body>
+</html>

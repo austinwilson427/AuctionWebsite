@@ -1,0 +1,25 @@
+﻿<div class="modal-header">
+    <h1>Add Item</h1>
+</div>
+<div class="modal-body">
+    <form class="form-group" ng-submit="vm.submitItem(vm.itemToAdd)">
+        <label>Item Name</label>
+        <input class="form-control" type="text" ng-model="vm.itemToAdd.itemName" />
+        <label>Item Description</label>
+        <input class="form-control" type="text" ng-model="vm.itemToAdd.itemDescription" />
+        <label>Minimum Bid</label>
+        <input class="form-control" type="text" ng-model="vm.itemToAdd.minimumBid" />
+        <label>Item Image Link</label>
+        <input class="form-control" type="text" ng-model="vm.itemToAdd.itemImageLink" />
+        <label>Number of Bids</label>
+        <input class="form-control" type="text" ng-model="vm.itemToAdd.numberOfBids" />
+        <label>Activate Item</label>
+        <select class="form-control"  ng-model="vm.itemToAdd.isActive">
+            <option>True</option>
+            <option>False</option>
+        </select>
+        <br />
+        <input class="form-control btn btn-primary" type="submit" value="Add Item" />
+    </form>
+    <button class="form-control btn btn-success" ng-click="vm.closeModal()">Cancel</button>
+</div>

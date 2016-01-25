@@ -1,0 +1,32 @@
+﻿<div class="row">
+    <div class="col-md-4 col-md-offset-4 text-center">
+        <button class="btn btn-primary" ng-click="vm.addItemModal()">Add New Item</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-span-12">
+        <div class="wrap_table">
+            <table class="mine table table-hover">
+                <tr>
+                    <th colspan="2">Item</th>
+                    <th>Current Bid</th>
+                    <th>Current Winner</th>
+                    <th>Remaining Bids</th>
+                    <th>Add</th>
+                </tr>
+                <tr ng-repeat="item in vm.items">
+                    <td><a href="{{item.itemImageLink}}"><img class="item_image" src="{{item.itemImageLink}}" /></a></td>
+                    <td><a href="#" ng-click="vm.showModal(item)">{{item.itemName}}</a></td>
+                    <td>{{item.minimumBid | currency}}</td>
+                    <td>{{item.currentWinner}}</td>
+                    <td>{{item.numberOfBids}}</td>
+
+                    <td ng-show="item.isActive"><a href="#" ng-click="vm.addBid(item, item.id)">Add Bid</a></td>
+                    <td ng-show="!item.isActive"><a href="#" ng-click="vm.addBid(item, item.id)">See Bids</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    
+</div>

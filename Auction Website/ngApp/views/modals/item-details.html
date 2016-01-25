@@ -1,0 +1,36 @@
+﻿<div class="modal-header">
+    <h1>{{vm.data.itemName}}</h1>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="modal_table">
+                <tr>
+                    <td><img class="item_image" src="{{vm.data.itemImageLink}}" /></td>
+                </tr>
+                <tr>
+                    <td class="desc">
+                        {{vm.data.itemDescription}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Current Bid: {{vm.data.minimumBid | currency}}</td>
+                </tr>
+                <tr>
+                    <td>Number of Bids Remaining: {{vm.data.numberOfBids}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-3">
+            <button class="btn btn-danger" ng-click="vm.deleteItem(vm.data.id, vm.data.itemName)">Delete</button>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-success" ng-click="vm.closeModal()">Cancel</button>
+        </div>
+    </div>
+   
+</div>

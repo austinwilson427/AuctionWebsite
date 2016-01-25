@@ -1,0 +1,41 @@
+﻿img.item_image {
+    height: 200px;
+    width: 270px;
+}
+
+
+.wrap_table {
+    margin: 20px auto;
+}
+
+table.mine {
+    width: 94%;
+    margin: auto;
+}
+
+table.mine td {
+    vertical-align: middle !important;
+    
+}
+
+table.modal_table td, table.modal_table th {
+    padding: 5px 5px 5px 20px;
+}
+
+    table.modal_table td.desc {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+table.bid_history {
+    width: 80%;
+    margin: auto;
+}
+
+    table.bid_history td, table.bid_history th {
+        padding: 5px;
+    }
+
+td.error_cell {
+    color: red;
+}
